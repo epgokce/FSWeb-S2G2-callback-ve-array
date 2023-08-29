@@ -9,22 +9,13 @@ const { fifaData } = require('./fifa.js')
 //(a) 2014 Dünya kupası Finali Evsahibi takım ismi (dizide "Home Team Name" anahtarı)
 
 const filteredFifa = fifaData.filter((mac) => {
-	if (mac.Year === 2014 && mac.Stage === "Final") {
-	  return mac;
-	}
-  });
-  const filteredFifa2 = fifaData.filter(function (mac) {
-	if (mac.Year === 2014 && mac.Stage === "Final") {
-	  return mac;
-	}
-  });
-  const matchesIn2014 = fifaData.filter((item) => {
-	return item.Year === 2014 && item.Stage === "Final";
-  });
+    return mac.Year === 2014 && mac.Stage === "Final";
+});
+ 
   
   const fin2014Obj = filteredFifa[0];
   
-  console.log("matchesIn2014", fin2014Obj["Home Team Name"]);
+  
   
   const fHomeTeam = fin2014Obj["Home Team Name"];
   console.log("G1 a", fHomeTeam);
